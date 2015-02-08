@@ -3,3 +3,11 @@ Author: michealwillard <willardm@onid.oregonstate.edu>
 Start: Sat Feb 7 12:52:25 2015 -0800
 End: Sat Feb 7 13:32:40 2015 -0800
 Tasks: Initial Repo Push.
+
+Start: Sat Feb 7 13:47:56 2015 -0800
+End: Sat Feb 7 19:37:12 2015 -0800
+Tasks: Completed multtable.php, updated log.txt, pushed to GitHub.
+
+Start: Sat Feb 7 XX:XX:XX 2015 -0800
+End: Sat Feb 7 XX:XX:XX 2015 -0800
+Tasks: 

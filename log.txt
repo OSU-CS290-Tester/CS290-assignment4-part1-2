@@ -1,0 +1,5 @@
+Author: michealwillard <willardm@onid.oregonstate.edu>
+
+Start: Sat Feb 7 12:52:25 2015 -0800
+End: Sat Feb 7 13:32:40 2015 -0800
+Tasks: Initial Repo Push.

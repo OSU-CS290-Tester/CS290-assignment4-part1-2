@@ -13,5 +13,13 @@ End: Sat Feb 7 20:19:34 2015 -0800
 Tasks: Cleaned up multtable.php, made test_loopback.html, started loopback.php, updated log.txt, pushed changes.
 
 Start: Sun Feb 7 09:37:49 2015 -0800
-End: Sun Feb 7 xx:xx:xx 2015 -0800
-Tasks: 
+End: Sun Feb 7 10:19:14 2015 -0800
+Tasks: Completed loopback.php, finished testing, updated log and pushed.
+
+Start: Sun Feb 7 10:25:32 2015 -0800
+End: Sun Feb 7 11:02:54 2015 -0800
+Tasks: Sketched out flow chart for login.php, content1.php and content2.php, started framing code.
+
+Start: Sun Feb 7 15:57:09 2015 -0800
+End: Sun Feb 7 17:37:12 2015 -0800
+Tasks: Got login.php and content1.php almost finished. Undefined index errors on login ln 14,24 content1 ln16.

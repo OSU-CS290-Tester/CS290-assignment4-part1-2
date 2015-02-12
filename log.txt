@@ -23,3 +23,15 @@ Tasks: Sketched out flow chart for login.php, content1.php and content2.php, sta
 Start: Sun Feb 7 15:57:09 2015 -0800
 End: Sun Feb 7 17:37:12 2015 -0800
 Tasks: Got login.php and content1.php almost finished. Undefined index errors on login ln 14,24 content1 ln16.
+
+Start: Wed Feb 11 18:02:45 2015 -0800
+End: Wed Feb 11 19:08:32 2015 -0800
+Tasks: Debugged some issues on login.php, content1.php.
+
+Start: Thu Feb 12 07:12:11 2015 -0800
+End: Thu Feb 12 08:34:57 2015 -0800
+Tasks: Diagrammed logic on content1.php to try and minimize, tried to implement changes, didn't work - changed it back.
+
+Start: Thu Feb 12 11:15:44 2015 -0800
+End: Thu Feb 12 13:38:22 2015 -0800
+Tasks: Cleaned up login.php, content1.php and finished content2.php. COmmited and pushed.

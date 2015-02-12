@@ -13,18 +13,19 @@ $redirectContent2 = $redirect . '/content2.php';
 
 //***** Text Display Variables *****
 $displayText = "";
-$sessionActiveText = "<p>Hi $_SESSION[name], you have visited this page $_SESSION[visits] times.<p>Click <a href=\"$redirectLogout\">here</a> to logout.<p>Click <a href=\"$redirectContent2\">here</a> to visit Content 2.";
-$sessionNotActiveText = "<p>ERROR: You didn't enter a Username..
+$sessionNotActiveText = "<p>ERROR: You didn't enter a Username.
 <p>Please click <a href=\"$redirectLogout\">here</a> to return to the login page.";
 
 //***** Main Body Code *****
 // Approach adapted from O'Reilly PHP and MySQL Ch. 10-11.
 // Check for user name on first visit.
+
 if(isset($_POST['username'])){
   // If username is empty redirect to login.
   if($_POST['username'] === "" || $_POST['username'] === null){
     $displayText =  $sessionNotActiveText;
     $_SESSION['sessionActive'] = false;
+    // echo "baldwin";
   }
   //Else a Username was entered.
   else{
@@ -33,15 +34,16 @@ if(isset($_POST['username'])){
       $_SESSION['name'] = $_POST['username'];
       $_SESSION['sessionActive'] = true;
       $_SESSION['visits'] = 0;
-      $displayText =  $sessionActiveText;
+      $displayText =  "<p>Hi $_SESSION[name], you have visited this page
+      $_SESSION[visits] times.<p>Click <a href=\"$redirectLogout\">here</a>
+      to logout.
+      <p>Click <a href=\"$redirectContent2\">here</a> to visit Content 2.";
+      // echo "sherman";
       $_SESSION['visits']++;
     }
   }
 }
-if(!isset($_POST['username'])){
-  $displayText =  $sessionNotActiveText;
-  $_SESSION['sessionActive'] = false;
-}
+
 // Check if user is already logged in.
 if(isset($_SESSION['name'])){
   if(isset($_POST['username'])){
@@ -49,22 +51,35 @@ if(isset($_SESSION['name'])){
       $_SESSION['name'] = $_POST['username'];
       $_SESSION['sessionActive'] = 'true';
       $_SESSION['visits'] = 0;
-      $displayText =  $sessionActiveText;
+      $displayText =  "<p>Hi $_SESSION[name], you have visited this page
+      $_SESSION[visits] times.<p>Click <a href=\"$redirectLogout\">here</a>
+      to logout.
+      <p>Click <a href=\"$redirectContent2\">here</a> to visit Content 2.";
+      // echo "wilson";
       $_SESSION['visits']++;
     }
     else{
-      $displayText =  $sessionActiveText;
+      $displayText =  "<p>Hi $_SESSION[name], you have visited this page
+      $_SESSION[visits] times.<p>Click <a href=\"$redirectLogout\">here</a>
+      to logout.
+      <p>Click <a href=\"$redirectContent2\">here</a> to visit Content 2.";
+      // echo "lynch";
       $_SESSION['visits']++;
     }
   }
   else{
-    $displayText =  $sessionActiveText;
+    $displayText =  "<p>Hi $_SESSION[name], you have visited this page
+    $_SESSION[visits] times.<p>Click <a href=\"$redirectLogout\">here</a>
+    to logout.
+    <p>Click <a href=\"$redirectContent2\">here</a> to visit Content 2.";
+    // echo "thomas";
     $_SESSION['visits']++;
   }
 }
 // Redirect final condition for sessionActive not set
 if(!isset($_SESSION['sessionActive'])){
   header("Location: {$redirect}/login.php");
+  // echo "wagner";
 }
 ?>
 <!DOCTYPE html>

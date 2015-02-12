@@ -2,6 +2,8 @@
 error_reporting(E_ALL);
 ini_set('display_errors',1);
 session_start();
+
+//***** Set Up Variables ****
 $filePath = explode('/', $_SERVER['PHP_SELF'], -1);
 $filePath = implode('/', $filePath);
 $redirect = "http://" . $_SERVER['HTTP_HOST'] . $filePath;
@@ -11,7 +13,7 @@ $redirectContent1 = $redirect . '/content1.php';
 $redirectContent2 = $redirect . '/content2.php';
 
 $displayText = "";
-$sessionActiveText = "<p>Hi $_SESSION[name].<p>Click <a href=\"$redirectContent1\">here</a> to visit Content 1.<p> If this is not you, click <a href=\"$redirectLogout\">here</a> to logout.";
+
 
 //checks if 'logged' exists in URL
 //and logged is true, i.e. user is logged off
@@ -21,7 +23,8 @@ if(isset($_GET['loggedOut']) && $_GET['loggedOut'] === 'true'){
   session_destroy(); //destroy session
   $displayText = "<p>You have succesfully logged out.";
 }
-if($_SESSION['sessionActive'] === 'true'){
+if(isset($_SESSION['sessionActive']) && $_SESSION['sessionActive'] === 'true'){
+  $sessionActiveText = "<p>Hi $_SESSION[name].<p>Click <a href=\"$redirectContent1\">here</a> to visit Content 1.<p> If this is not you, click <a href=\"$redirectLogout\">here</a> to logout.";
   $displayText = $sessionActiveText;
 }
 ?>
@@ -39,7 +42,7 @@ Assignment 4 Part 1
   <title>Login Page</title>
 </head>
 <body>
-  <php? echo $displayText; ?>
+  <?php echo $displayText; ?>
   <form action=<?=$redirectContent1?> method="post">
     <fieldset>
       <label>Username:</label>

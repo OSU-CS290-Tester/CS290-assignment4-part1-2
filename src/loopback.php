@@ -25,7 +25,7 @@ function getInput(&$type){
   }
   elseif($_SERVER['REQUEST_METHOD'] === 'POST'){
     // echo 'POST';
-    $type = 'GET';
+    $type = 'POST';
     return $_POST;
   }
 }
